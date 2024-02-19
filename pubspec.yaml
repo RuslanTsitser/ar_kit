@@ -1,19 +1,31 @@
 name: ar_kit
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
+  sdk: ">=3.2.6 <4.0.0"
 
 dependencies:
+  arkit_plugin:
+    git:
+      url: https://github.com/RuslanTsitser/arkit_flutter_plugin.git
+      ref: master
+  collection: ^1.18.0
   flutter:
     sdk: flutter
+  flutter_archive: ^6.0.0
+  path_provider: ^2.1.2
+  vector_math: ^2.1.4
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/objects/
+    - assets/objects/textures/
