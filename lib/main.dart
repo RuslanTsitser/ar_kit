@@ -1,3 +1,4 @@
+import 'package:ar_kit/features/ar_add_anchor.dart';
 import 'package:ar_kit/features/ar_with_animation.dart';
 import 'package:ar_kit/features/simple_ar_kit.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,18 @@ class ExampleList extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => const SimpleArKit(),
+              ),
+            ),
+          ),
+        ),
+        ExampleCard(
+          example: Example(
+            'Custom Anchor',
+            '-',
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ArAddAnchor(),
               ),
             ),
           ),
