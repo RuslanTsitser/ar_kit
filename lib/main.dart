@@ -1,4 +1,5 @@
 import 'package:ar_kit/features/ar_add_anchor.dart';
+import 'package:ar_kit/features/ar_core_android.dart';
 import 'package:ar_kit/features/ar_with_animation.dart';
 import 'package:ar_kit/features/simple_ar_kit.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class ExampleList extends StatelessWidget {
-  const ExampleList({Key? key}) : super(key: key);
+  const ExampleList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class ExampleList extends StatelessWidget {
         ),
         ExampleCard(
           example: Example(
-            'Ar For iOS',
+            'Image tracking',
             '-',
             () => Navigator.push(
               context,
@@ -60,6 +61,30 @@ class ExampleList extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => const ArAddAnchor(),
+              ),
+            ),
+          ),
+        ),
+        ExampleCard(
+          example: Example(
+            'RealtyKit',
+            '-',
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ArAddAnchor(),
+              ),
+            ),
+          ),
+        ),
+        ExampleCard(
+          example: Example(
+            'Android ARCore',
+            '-',
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ArDrawingAndroidScreen(),
               ),
             ),
           ),
